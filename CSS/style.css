@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/*animacion*/
+body {
+  animation: todo 1s ease forwards;
+}
+
+@keyframes todo {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*---------------------------------------- navBar --*/
+
+.titulo {
+  font-size: 35px;
+  font-weight: 700;
+  color: #0597F2;
+}
+
+.tituLogo{
+  display: flex;
+  gap: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+  padding: 0 20px;
+}
+
+.paginas a {
+  color: #0597F2;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/*---------------------------------------- seccion1 --*/
+
+.titleSeccion1 {
+  font-size: 48px;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.subtitleSeccion1 {
+  font-size: 24px;
+  color: rgb(100, 251, 40);
+}
+
+
+.textosSeccion1 {
+  text-align: center;
+}
+
+.seccion1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0597F2;
+  position: relative;
+  height: 200px;
+}
+
+.seccion1::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-style: solid;
+  border-width: 34px 44px 0 44px;
+  border-color: #0597F2 transparent transparent transparent;
+  transform: translateX(-50%) translateY(100%);
+}
+
+@keyframes img {
+  from {
+    opacity: 0;
+    left: 150%;
+  }
+
+  to {
+    opacity: 1;
+    left: 64%;
+  }
+}
+
+
+/*---------------------------------------- cortadorUrl --*/
+.seccion2 {
+  text-align: center;
+  margin: 60px 0 30px;
+}
+
+.seccionCortador {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cortaAqui {
+  font-size: 30px;
+  color: #0597F2;
+}
+
+.acortado {
+  width: 350px;
+  border: none;
+  border-bottom: 3px solid #0597F2;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.botonAcortado {
+  right: 27%;
+  position: absolute;
+  border-width: 1px;
+  width: 100px;
+  height: 45px;
+  border-radius: 100px;
+  background: #fff;
+  border: 3px solid #0597F2;
+  cursor: pointer;
+}
+
+.botonAcortado,
+span {
+  font-size: 20px;
+  color: #0597F2;
+}
+
+.imagenCheck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  margin: auto;
+}
+
+/*animacion*/
+@keyframes extend {
+  0% {
+    width: 100px;
+    height: 45px;
+    border-radius: 100px;
+  }
+
+  50% {
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    background: #0597F2;
+    right: 375px;
+  }
+
+  100% {
+    width: 100px;
+    height: 45px;
+    border-radius: 100px;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.botonAcortado:focus {
+  animation: extend 1s ease-in-out forwards;
+}
+
+.botonAcortado:focus>span {
+  animation: disappear 1s ease-in-out forwards;
+}
+
+.botonAcortado:focus>img {
+  animation: appear 1s ease-in-out forwards;
+}
+
+/*---------------------------------------- Url Cortados --*/
+
+.cortados,
+.historialCortados {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.113);
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.url {
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.links a {
+  font-size: 20px;
+  color: #0597F2;
+  text-decoration: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.botonescopiarEliminar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.copiar,
+.eliminar {
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.eliminar {
+  background-color: rgb(248, 71, 71);
+}
+
+.copiar {
+  background-color: #0597F2;
+}
+
+.eliminar:hover {
+  background-color: rgb(213, 46, 46);
+}
+
+.copiar:hover {
+  background-color: #0272b7;
+}
+
+/*---------------------------------------- Historial --*/
+
+.borraTodo {
+  display: flex;
+  justify-content: end;
+  margin: 20px 25px;
+}
+
+.borraHistorial {
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(248, 71, 71);
+}
+
+.borraHistorial:hover {
+  background-color: rgb(213, 46, 46);
+}
+
+
+/*---------------------------------------------------------------------------------------- MOVIL --*/
+/*-------------------------------------------------------------------------------------------------*/
+@media (max-width: 425px) {
+
+
+  /*---------------------------------------- seccionUno --*/
+
+  .titleSeccion1 {
+    font-size: 28px;
+  }
+
+  .subtitleSeccion1 {
+    font-size: 20px;
+  }
+
+  @keyframes img {
+    from {
+      opacity: 0;
+      left: 150%;
+    }
+
+    to {
+      opacity: 1;
+      left: 50%;
+    }
+  }
+
+  /*---------------------------------------- cortadorUrl --*/
+
+  .cortaAqui {
+    font-size: 25px;
+  }
+
+.seccion1{
+  height: 130px;
+}
+
+  .acortado {
+    width: 50%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+.botonAcortado {
+  right: 2%;
+  width: 80px;
+  height: 40px;
+  border: 3px solid #0597F2;
+}
+
+  @keyframes extend {
+    0% {
+      width: 80px;
+      height: 40px;
+      border-radius: 100px;
+    }
+
+    50% {
+      width: 40px;
+      height: 40px;
+      border-radius: 100px;
+      background: #0597F2;
+      right: 7%;
+    }
+
+    100% {
+      width: 80px;
+      height: 40px;
+      border-radius: 100px;
+    }
+  }
+
+  /*---------------------------------------- Url Cortados --*/
+  .cortados,
+  .historialCortados {
+    gap: 10px;
+  }
+
+  .links {
+    padding: 10px;
+    width: 170px;
+    gap: 7px;
+  }
+
+  .copiar,
+  .eliminar {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+
+  .url {
+    font-size: 12px;
+    overflow: hidden;
+  }
+  
+  .links a {
+    font-size: 16px;
+    color: #0597F2;
+    text-decoration: none;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+
+}
