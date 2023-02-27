@@ -20,3 +20,7 @@ Eliminación de enlaces de la sección de enlaces cortados.
 ## Miralo
 
 [Cutter](https://pablo1591moreno.github.io/urlCutter/)
+
+![cutter1](https://user-images.githubusercontent.com/95658189/221631332-ef871857-cfc1-4614-bb6e-be1f0f401a7b.jpg)
+
+![cutter2](https://user-images.githubusercontent.com/95658189/221631367-df1fa8fb-c52b-43e9-9b1c-e0c54744f2bf.jpg)
