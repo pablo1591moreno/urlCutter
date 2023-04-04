@@ -1,417 +1,448 @@
-* {
-  margin: 0;
-  padding: 0;
+/*-------------------- Colores */
+:root {
+  --azul: #3F39F0;
+  --verde: #D9F022;
+  --azulClaro: #2E8DF0;
+  --grisClaro: #F3EFF4;
+  --rojo: #FF5733;
+  --negro: #000000;
 }
 
+/*-------------------- fondo */
 body {
   font-family: 'Ubuntu', sans-serif;
+  color: var(--grisClaro);
+  font-weight: 400;
+  background-image: url(/images/Rectangle.svg);
+  margin: 0px;
 }
 
-/*animacion*/
-body {
-  animation: todo 1s ease forwards;
+#svg1 {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
 }
 
-@keyframes todo {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+#svg2 {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 429px;
+  z-index: -1;
 }
 
-/*---------------------------------------- navBar --*/
+#svg3 {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 1630px;
+  z-index: -1;
+}
+
+.imagenFondo {
+  position: absolute;
+  width: 550px;
+  height: 521px;
+  left: 700px;
+  top: 7px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/*-------------------- Header */
+.tituLogo {
+  display: flex;
+  gap: 6px;
+  margin: 16px 80px 24px;
+  align-items: center
+}
+
+.titulo,
+.logo {
+  margin: 0px;
+}
 
 .titulo {
   font-size: 35px;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+}
+
+/*-------------------- Descripcion */
+.seccionDescripcion {
+  width: 100%;
+  height: 336px;
+}
+
+.descripcion {
+  width: 441px;
+  margin-left: 13%;
+}
+
+.descripcion h2 {
+  font-style: italic;
+  font-size: 50px;
+  margin: 0 0 6px 0;
+}
+
+.descripcion h2 span {
+  color: var(--verde);
+  font-style: normal;
   font-weight: 700;
-  color: #0597F2;
 }
 
-.tituLogo{
-  display: flex;
-  gap: 10px;
+.descripcion p {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: justify;
+  margin: 0;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0px;
-  padding: 0 20px;
-}
-
-.paginas a {
-  color: #0597F2;
-  text-decoration: none;
-  margin-left: 20px;
+.descripcion p span {
+  color: var(--verde);
+  font-style: normal;
   font-weight: 700;
-  cursor: pointer;
 }
 
-/*---------------------------------------- seccion1 --*/
+/*-------------------- CortadorUrl */
 
-.titleSeccion1 {
-  font-size: 48px;
-  line-height: 1;
-  color: #ffffff;
-  margin-bottom: 5px;
+.cortadorUrl {
+  margin-top: 35px;
+  margin-bottom: 15px;
 }
 
-.subtitleSeccion1 {
-  font-size: 24px;
-  color: rgb(100, 251, 40);
-}
-
-
-.textosSeccion1 {
+.cortadorUrl h3 {
   text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 11px;
 }
 
-.seccion1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0597F2;
-  position: relative;
-  height: 200px;
-}
-
-.seccion1::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  border-style: solid;
-  border-width: 34px 44px 0 44px;
-  border-color: #0597F2 transparent transparent transparent;
-  transform: translateX(-50%) translateY(100%);
-}
-
-@keyframes img {
-  from {
-    opacity: 0;
-    left: 150%;
-  }
-
-  to {
-    opacity: 1;
-    left: 64%;
-  }
-}
-
-
-/*---------------------------------------- cortadorUrl --*/
-.seccion2 {
-  text-align: center;
-  margin: 60px 0 30px;
+.cortadorUrl h3 span {
+  font-weight: 700;
+  color: var(--verde);
 }
 
 .seccionCortador {
   display: flex;
+  text-align: center;
   justify-content: center;
-  margin-top: 10px;
-}
-
-.cortaAqui {
-  font-size: 30px;
-  color: #0597F2;
+  gap: 5px;
 }
 
 .acortado {
-  width: 350px;
+  width: 400px;
+  height: 35px;
   border: none;
-  border-bottom: 3px solid #0597F2;
-  font-size: 18px;
-  padding: 10px;
+  border-radius: 25px;
+  background: var(--grisClaro);
+  font-weight: 700;
 }
 
 .botonAcortado {
-  right: 27%;
-  position: absolute;
-  border-width: 1px;
   width: 100px;
-  height: 45px;
-  border-radius: 100px;
-  background: #fff;
-  border: 3px solid #0597F2;
+  height: 35px;
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 25px;
+  color: var(--azul);
+  background: var(--grisClaro);
   cursor: pointer;
 }
 
-.botonAcortado,
-span {
-  font-size: 20px;
-  color: #0597F2;
+#tijeras {
+  display: none;
+  font-size: 25px;
+  animation: revote 1s ease-in-out;
 }
 
-.imagenCheck {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  margin: auto;
+.botonAcortado:hover .texto {
+  display: none;
 }
 
-/*animacion*/
-@keyframes extend {
-  0% {
-    width: 100px;
-    height: 45px;
-    border-radius: 100px;
-  }
-
-  50% {
-    width: 45px;
-    height: 45px;
-    border-radius: 100px;
-    background: #0597F2;
-    right: 375px;
-  }
-
-  100% {
-    width: 100px;
-    height: 45px;
-    border-radius: 100px;
-  }
+.botonAcortado:hover #tijeras {
+  display: inline-block;
 }
 
-@keyframes disappear {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+/*-------------------- Cortados */
+.seccionCortados {
+  height: 391px;
+  margin: 30px 13% 0;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.botonAcortado:focus {
-  animation: extend 1s ease-in-out forwards;
-}
-
-.botonAcortado:focus>span {
-  animation: disappear 1s ease-in-out forwards;
-}
-
-.botonAcortado:focus>img {
-  animation: appear 1s ease-in-out forwards;
-}
-
-/*---------------------------------------- Url Cortados --*/
-
-.cortados,
-.historialCortados {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.cortados {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, 130px);
+  gap: 45px;
 }
 
 .links {
+  background: var(--grisClaro);
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  background-color: #f1f1f1;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.113);
-  padding: 20px;
-  text-align: center;
-  width: 250px;
-  border-radius: 10px;
+  justify-content: center;
   gap: 10px;
+  padding: 20px;
 }
 
 .url {
-  font-size: 14px;
+  color: var(--negro);
+  font-weight: 300;
+  font-size: 12px;
+  margin: 0px;
   overflow: hidden;
 }
 
-.links a {
+.urlCortado {
+  font-weight: 700;
   font-size: 20px;
-  color: #0597F2;
-  text-decoration: none;
-  font-weight: bolder;
-  cursor: pointer;
+  margin: 0px;
 }
 
-.botonescopiarEliminar {
+.botones {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.copiar,
-.eliminar {
-  border-radius: 10px;
+.btn {
+  display: inline-block;
+  width: 75px;
+  height: 35px;
   border: none;
-  padding: 10px 20px;
-  font-size: 15px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  color: white;
 }
 
-.eliminar {
-  background-color: rgb(248, 71, 71);
+.btn .iconify {
+  font-size: 25px;
+  color: var(--grisClaro);
+  animation: revote 1s ease-in-out;
+}
+
+@keyframes revote {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+button .text {
+  color: var(--grisClaro);
+  font-weight: 700;
 }
 
 .copiar {
-  background-color: #0597F2;
+  background-color: var(--azulClaro);
 }
 
-.eliminar:hover {
-  background-color: rgb(213, 46, 46);
+.eliminar {
+  background-color: var(--rojo);
 }
 
-.copiar:hover {
-  background-color: #0272b7;
+.iconify {
+  display: none;
 }
 
-/*---------------------------------------- Historial --*/
-
-.borraTodo {
-  display: flex;
-  justify-content: end;
-  margin: 20px 25px;
+.btn:hover .text {
+  display: none;
 }
 
-.borraHistorial {
-  border-radius: 10px;
+.btn:hover .iconify {
+  display: inline-block;
+}
+
+.btn:focus .text {
+  display: none;
+}
+
+.btn:focus .iconify {
+  display: inline-block;
+}
+
+/*-------------------- Planes */
+.seccionPlanes {
+  position: absolute;
+  top: 930px;
+  height: 640px;
+}
+
+.seccionPlanes h3 {
+  margin-bottom: 34px;
+  font-size: 45px;
+  text-align: center;
+  color: var(--azul);
+}
+
+.seccionPlanes h3 span {
+  font-weight: 400;
+}
+
+.planes {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 40px;
+  margin: 0 13%;
+}
+
+.plan {
+  background-color: var(--azul);
+  border-radius: 20px;
+  height: 479px;
+}
+
+.plan h4 {
+  font-size: 45px;
+  color: var(--verde);
+  text-align: center;
+  margin: 39px 0 45px 0;
+}
+
+#planDosTitulo {
+  margin: 9px 0 0 0;
+}
+
+.plan h4 span {
+  font-weight: 400;
+}
+
+.plan p {
+  padding: 0 5%;
+  font-size: 22px;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.plan h5 {
+  width: 150px;
+  padding: 10px;
+  color: var(--azul);
+  font-size: 35px;
+  background-color: var(--grisClaro);
+  margin: 30px 0px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 0 15px 15px 0;
+
+}
+
+.plan h5 span {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/*-------------------- Form */
+.seccionFormulario {
+  position: absolute;
+  width: 100%;
+  top: 1680px;
+  text-align: center;
+}
+
+.seccionFormulario h3 {
+  font-size: 36px;
+  color: var(--verde);
+}
+
+.seccionFormulario h3 span {
+  font-weight: 400;
+}
+
+form {
+  text-align: center;
+}
+
+form input,
+.consulta {
+  width: 520px;
+  height: 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
   border: none;
-  padding: 10px 20px;
-  font-size: 15px;
-  cursor: pointer;
-  color: white;
-  background-color: rgb(248, 71, 71);
+  padding: 10px;
 }
 
-.borraHistorial:hover {
-  background-color: rgb(213, 46, 46);
+input::placeholder,
+.consulta::placeholder {
+  color: var(--azulClaro);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.consulta {
+  height: 150px;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 
-/*---------------------------------------------------------------------------------------- MOVIL --*/
-/*-------------------------------------------------------------------------------------------------*/
-@media (max-width: 425px) {
-
-
-  /*---------------------------------------- seccionUno --*/
-
-  .titleSeccion1 {
-    font-size: 28px;
-  }
-
-  .subtitleSeccion1 {
-    font-size: 20px;
-  }
-
-  @keyframes img {
-    from {
-      opacity: 0;
-      left: 150%;
-    }
-
-    to {
-      opacity: 1;
-      left: 50%;
-    }
-  }
-
-  /*---------------------------------------- cortadorUrl --*/
-
-  .cortaAqui {
-    font-size: 25px;
-  }
-
-.seccion1{
-  height: 130px;
+.enviar {
+  width: 130px;
+  height: 35px;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--azul);
+ cursor: pointer;
 }
 
-  .acortado {
-    width: 50%;
-    font-size: 15px;
-    padding: 10px;
-  }
 
-.botonAcortado {
-  right: 2%;
-  width: 80px;
-  height: 40px;
-  border: 3px solid #0597F2;
+/*-------------------- footer */
+footer {
+  position: absolute;
+  width: 100%;
+  top: 2200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-  @keyframes extend {
-    0% {
-      width: 80px;
-      height: 40px;
-      border-radius: 100px;
-    }
+.redes {
+  display: flex;
+}
 
-    50% {
-      width: 40px;
-      height: 40px;
-      border-radius: 100px;
-      background: #0597F2;
-      right: 7%;
-    }
+a {
+  text-decoration: none;
+}
 
-    100% {
-      width: 80px;
-      height: 40px;
-      border-radius: 100px;
-    }
-  }
+.redes a:not(:last-child) {
+  margin-right: 55px;
+}
 
-  /*---------------------------------------- Url Cortados --*/
-  .cortados,
-  .historialCortados {
-    gap: 10px;
-  }
-
-  .links {
-    padding: 10px;
-    width: 170px;
-    gap: 7px;
-  }
-
-  .copiar,
-  .eliminar {
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 16px;
-  }
-
-  .url {
-    font-size: 12px;
-    overflow: hidden;
-  }
-  
-  .links a {
-    font-size: 16px;
-    color: #0597F2;
-    text-decoration: none;
-    font-weight: bolder;
-    cursor: pointer;
-  }
-
-
+a .iconify {
+  display: block;
+  color: var(--azul);
+  font-size: 43px;
 }

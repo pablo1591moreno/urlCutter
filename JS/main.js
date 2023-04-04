@@ -13,20 +13,20 @@ const inputAcortado = document.querySelector(".acortado");
 const botonAcortado = document.querySelector(".botonAcortado");
 const seccionCortados = document.querySelector(".cortados");
 const links = JSON.parse(localStorage.getItem("cortados")) || [];
-const linksHistorial = JSON.parse(localStorage.getItem("cortadosHistorial")) || [];
-const seccionHistorial = document.querySelector(".historialCortados");
 
-renderHistorial(linksHistorial)
 renderLinks(links)
 
 
+let cantidadLinks = 0;
+console.log(cantidadLinks)
 // Agregamos un evento click al botón
+
 botonAcortado.addEventListener("click", () => {
   const urlEntrante = inputAcortado.value;
 
   if (!urlEntrante) {
-    alert("ingresa la URL")
-    return
+    alert("Ingresa la URL");
+    return;
   }
 
   const headers = {
@@ -49,25 +49,26 @@ botonAcortado.addEventListener("click", () => {
     const link = await response.json();
     return link.shortUrl;
   }
-  shorten(urlEntrante)
-    .then(data => {
-      const links = JSON.parse(localStorage.getItem("cortados")) || [];
-      const newLink = { linkOriginal: urlEntrante, linkCortado: data };
-      links.unshift(newLink);
-      localStorage.setItem("cortados", JSON.stringify(links));
 
-      const linksHistorial = JSON.parse(localStorage.getItem("cortadosHistorial")) || [];
-      linksHistorial.unshift(newLink)
-      localStorage.setItem("cortadosHistorial", JSON.stringify(linksHistorial));
-
-      renderHistorial(linksHistorial)
-      renderLinks(links)
-    })
-    .catch(error => {
-      console.error(error);
-      alert("Hubo un error al procesar la petición, intente más tarde");
-    });
+  if (cantidadLinks < 6) { // Verificar que no se hayan acortado ya 6 links
+    shorten(urlEntrante)
+      .then(data => {
+        cantidadLinks++; // Incrementar la variable
+        const links = JSON.parse(localStorage.getItem("cortados")) || [];
+        const newLink = { linkOriginal: urlEntrante, linkCortado: data };
+        links.unshift(newLink);
+        localStorage.setItem("cortados", JSON.stringify(links));
+        renderLinks(links);
+      })
+      .catch(error => {
+        console.error(error);
+        alert("Hubo un error al procesar la petición, intente más tarde");
+      });
+  } else {
+    alert("Ya se han acortado 6 links, no se pueden acortar más");
+  }
 });
+
 
 function renderLinks(links) {
   // Selecciona el elemento HTML con id "seccionCortados" y borra su contenido
@@ -80,11 +81,17 @@ function renderLinks(links) {
         `
         <div class="links">
           <p class="url">${element.linkOriginal}</p>
-          <p><a href="${element.linkCortado}" target="_blank">${element.linkCortado}</a></p>
-          <div class="botonescopiarEliminar" >
-          <button class="copiar">Copiar</button>
-          <button class="eliminar">Eliminar</button>
-        </div>
+          <p class="urlCortado"><a href="${element.linkCortado}" target="_blank">${element.linkCortado}</a></p>
+          <div class="botones">
+          <button class="btn copiar">
+            <span class="iconify" data-icon="material-symbols:file-copy-outline"></span>
+            <span class="text">Copiar</span>
+          </button>
+          <button class="btn eliminar">
+            <span class="iconify" data-icon="material-symbols:delete-outline-rounded"></span>
+            <span class="text">Eliminar</span>
+          </button>
+        </div>        
         </div>
         `
       );
@@ -105,6 +112,9 @@ function renderLinks(links) {
 
       // Elimina el elemento HTML "div" del DOM
       mismo.remove()
+
+      // Disminuye la cantidad de links en 1
+      cantidadLinks--;
     });
   });
 
@@ -125,43 +135,10 @@ function renderLinks(links) {
 
 }
 
-function renderHistorial(linksHistorial) {
-  if (seccionHistorial) {
-    linksHistorial.forEach(element => {
-      seccionHistorial.insertAdjacentHTML(
-        'beforeend',
-        `
-        <div class="links">
-          <p class="url">${element.linkOriginal}</p>
-          <p><a href="${element.linkCortado}" target="_blank">${element.linkCortado}</a></p>
-          <button class="copiar">Copiar</button>
-        </div>
-        `
-      )
-    }
-    )
+// No es necesario utilizar JavaScript para este ejemplo, pero aquí te dejamos un código de ejemplo para agregar un evento al botón si lo necesitas
+const cutButton = document.querySelector('.botonAcortado');
+cutButton.addEventListener('click', () => {
+  console.log('Botón "Cortar" pulsado');
+});
 
-    const botonesCopiar = document.querySelectorAll('.copiar');
-
-    botonesCopiar.forEach(boton => {
-      boton.addEventListener('click', event => {
-        const enlace = event.target.parentElement.previousElementSibling.querySelector('a');
-        const seleccion = window.getSelection();
-        const rango = document.createRange();
-        rango.selectNode(enlace);
-        seleccion.removeAllRanges();
-        seleccion.addRange(rango);
-        document.execCommand('copy');
-        seleccion.removeAllRanges();
-      });
-    });
-
-    borraHistorial = document.querySelector('.borraHistorial')
-
-    borraHistorial.addEventListener('click', () => {
-      localStorage.removeItem("cortadosHistorial")
-      seccionHistorial.remove()
-    });
-  }
-}
 
