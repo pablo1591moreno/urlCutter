@@ -132,14 +132,14 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-  gap: 5px;
+  
 }
 
 .acortado {
   width: 400px;
-  height: 35px;
+  height: 33px;
   border: none;
-  border-radius: 25px;
+  border-radius: 14px 0 0 14px;
   background: var(--grisClaro);
   font-weight: 700;
 }
@@ -150,7 +150,7 @@ body {
   border: none;
   font-size: 22px;
   font-weight: 700;
-  border-radius: 25px;
+  border-radius: 0 14px 14px 0;
   color: var(--azul);
   background: var(--grisClaro);
   cursor: pointer;
@@ -193,6 +193,7 @@ body {
   justify-content: center;
   gap: 10px;
   padding: 20px;
+  
 }
 
 .url {
@@ -259,6 +260,7 @@ body {
 button .text {
   color: var(--grisClaro);
   font-weight: 700;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .copiar {
@@ -385,11 +387,12 @@ form input,
 .consulta {
   width: 520px;
   height: 15px;
-  border-radius: 20px;
+  border-radius: 14px;
   margin-bottom: 20px;
   font-size: 18px;
   border: none;
   padding: 10px;
+font-family: 'Ubuntu', sans-serif;
 }
 
 input::placeholder,
@@ -409,7 +412,7 @@ input::placeholder,
 .enviar {
   width: 130px;
   height: 35px;
-  border-radius: 30px;
+  border-radius: 14px;
   border: none;
   font-size: 20px;
   font-weight: 700;
