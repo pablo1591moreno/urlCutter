@@ -21,10 +21,7 @@ Eliminación de enlaces de la sección de enlaces cortados.
 
 [Cutter](https://pablo1591moreno.github.io/urlCutter/)
 
-<<<<<<< HEAD
+## Imagen
+![identity](https://user-images.githubusercontent.com/95658189/232928753-7e67abcf-8558-4932-8e9f-4c5529da8e8d.png)
+![desktop - pageCutter](https://user-images.githubusercontent.com/95658189/232928746-30035beb-9a77-432f-ae30-b25663bb5f72.png)
 
-=======
-![cutter1](https://user-images.githubusercontent.com/95658189/221631332-ef871857-cfc1-4614-bb6e-be1f0f401a7b.jpg)
-
-![cutter2](https://user-images.githubusercontent.com/95658189/221631367-df1fa8fb-c52b-43e9-9b1c-e0c54744f2bf.jpg)
->>>>>>> 3283db5f94c45f17a274bb4b8f3783ed08b94899
