@@ -13,7 +13,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
   color: var(--grisClaro);
   font-weight: 400;
-  background-image: url(/images/Rectangle.svg);
+  background-image: url(images/Rectangle.svg);
   margin: 0px;
 }
 
