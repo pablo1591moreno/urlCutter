@@ -484,7 +484,7 @@ a .iconify {
   .fondo1 {
     width: 100%;
   }
-  
+
   .fondo1 img {
     position: absolute;
     top: 0;
@@ -493,11 +493,11 @@ a .iconify {
     height: auto;
     z-index: -1;
   }
-  
+
   .fondo2 {
     width: 100%;
   }
-  
+
   .fondo2 img {
     position: absolute;
     top: 420px;
@@ -521,119 +521,140 @@ a .iconify {
     width: 100%;
     margin: auto;
   }
-  
+
   .descripcion {
-   width: 85%;
-   margin: auto;
+    width: 85%;
+    margin: auto;
   }
 
-  .descripcion h2{
+  .descripcion h2 {
     font-size: 35px;
     text-align: center;
   }
-  
-  .descripcion p{
+
+  .descripcion p {
     font-size: 14px;
   }
 
 
   /*-------------------- CortadorUrl */
 
-  .secccionCortadorUrl{
+  .secccionCortadorUrl {
     display: flex;
     justify-content: center;
   }
 
-  .cortadorUrl{
+  .cortadorUrl {
     width: 85%;
     margin: 0;
   }
 
 
   /*-------------------- Cortados */
-.seccionCortados {
-  height: 391px;
-  width: 85%;
-  margin: 15px auto;
-}
+  .seccionCortados {
+    height: auto;
+    width: 85%;
+    margin: 25px auto;
+  }
 
-.cortados {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, 130px);
-  gap: 15px;
-}
+  .cortados {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 130px);
+    gap: 5px;
+  }
 
-.links {
-  background: var(--grisClaro);
-  border-radius: 14px;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px;
+  .links {
+    background: var(--grisClaro);
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
 
-}
+  }
 
-.url {
-  color: var(--negro);
-  font-weight: 300;
-  font-size: 12px;
-  margin: 0px;
-}
+  .url {
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0px;
+  }
 
-.urlCortado a{
-  overflow: hidden;
-  font-weight: 700;
-  font-size: 15px;
-  margin: 0px;
-}
+  .urlCortado a {
+    overflow: hidden;
+    font-size: 15px;
+    margin: 0px;
+  }
 
-.botones {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
+  .botones {
+    gap: 5px;
+  }
 
-.btn {
-  display: inline-block;
-  width: 75px;
-  height: 35px;
-  border: none;
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
+  /*-------------------- Planes */
 
-.btn .iconify {
-  font-size: 25px;
-  color: var(--grisClaro);
-  animation: revote 1s ease-in-out;
-}
+  .seccionPlanes {
+    position: absolute;
+    top: 880px;
+  }
+
+  .seccionPlanes h3 {
+    margin-bottom: 24px;
+    font-size: 35px;
+  }
 
 
-button .text {
-  color: var(--grisClaro);
-  font-weight: 700;
-  font-family: 'Ubuntu', sans-serif;
-}
+  .planes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .plan {
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 85%;
+  }
 
-.copiar {
-  background-color: var(--azulClaro);
-}
+  .plan h4 {
+    font-size: 45px;
+    text-align: center;
+    margin: 39px 0 45px 0;
+  }
 
-.eliminar {
-  background-color: var(--rojo);
-}
+  #planDosTitulo {
+    margin: 9px 0 0 0;
+  }
 
-.iconify {
-  display: none;
-}
+  .plan h4 span {
+    font-weight: 400;
+  }
+
+  .plan p {
+    padding: 0 5%;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: justify;
+  }
+
+  .plan h5 {
+    width: 150px;
+    padding: 10px;
+    font-size: 35px;
+    margin: 30px 0px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 0 15px 15px 0;
+
+  }
+
+  .plan h5 span {
+    font-size: 25px;
+    font-weight: 400;
+  }
 
 
 }
