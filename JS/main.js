@@ -1,13 +1,3 @@
-// Cambia el texto del titulo al pasar de a otra ventana
-let tituloActual = document.title;
-window.addEventListener('blur', () => {
-  tituloActual = document.title;
-  document.title = 'Vuelve Que sin ti la vida se me va Oh...';
-})
-window.addEventListener('focus', () => {
-  document.title = tituloActual;
-})
-
 // Seleccionamos los elementos del HTML que vamos a usar
 const inputAcortado = document.querySelector(".acortado");
 const botonAcortado = document.querySelector(".botonAcortado");
