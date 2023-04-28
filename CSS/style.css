@@ -13,7 +13,6 @@ body {
   font-family: 'Ubuntu', sans-serif;
   color: var(--grisClaro);
   font-weight: 400;
-  background-image: url(images/Rectangle.svg);
   margin: 0px;
 }
 
@@ -49,6 +48,13 @@ body {
   top: 7px;
   z-index: -1;
   overflow: hidden;
+}
+
+.fondoLineas img {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -2;
 }
 
 /*-------------------- Header */
@@ -132,7 +138,7 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-  
+
 }
 
 .acortado {
@@ -193,7 +199,7 @@ body {
   justify-content: center;
   gap: 10px;
   padding: 20px;
-  
+
 }
 
 .url {
@@ -292,6 +298,7 @@ button .text {
 }
 
 /*-------------------- Planes */
+
 .seccionPlanes {
   position: absolute;
   top: 930px;
@@ -363,6 +370,7 @@ button .text {
 }
 
 /*-------------------- Form */
+
 .seccionFormulario {
   position: absolute;
   width: 100%;
@@ -392,7 +400,7 @@ form input,
   font-size: 18px;
   border: none;
   padding: 10px;
-font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 input::placeholder,
@@ -417,7 +425,7 @@ input::placeholder,
   font-size: 20px;
   font-weight: 700;
   color: var(--azul);
- cursor: pointer;
+  cursor: pointer;
 }
 
 
