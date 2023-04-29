@@ -520,12 +520,22 @@ a .iconify {
     z-index: -1;
   }
 
+
+  .fondoImagen img {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    height: 470px;
+    z-index: -2;
+  }
+
   /*-------------------- Header */
 
   .tituLogo {
     display: flex;
     justify-content: center;
-    margin: 20px 0 20px;
+    margin: 20px 0 10px;
   }
 
   /*-------------------- Descripcion */
@@ -541,12 +551,15 @@ a .iconify {
   }
 
   .descripcion h2 {
-    font-size: 35px;
+    font-size: 2.3rem;
     text-align: center;
   }
 
   .descripcion p {
-    font-size: 14px;
+    font-size: .9rem;
+    line-height: 1.1rem;
+    width: 95%;
+    margin: auto;
   }
 
 
@@ -563,7 +576,7 @@ a .iconify {
   }
 
   .cortadorUrl h3 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   /*-------------------- Cortados */
@@ -618,7 +631,7 @@ a .iconify {
 
   .seccionPlanes h3 {
     margin-bottom: 24px;
-    font-size: 32px;
+    font-size: 2rem;
   }
 
 
@@ -653,20 +666,13 @@ a .iconify {
 
   .plan p {
     padding: 0 5%;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 20px;
   }
 
   .plan h5 {
-    width: 150px;
-    padding: 10px;
-    font-size: 25px;
+    font-size: 1.3rem;
     margin: 5px 0px;
-    line-height: 20px;
-    text-align: center;
-    border-radius: 0 15px 15px 0;
-
   }
 
   .plan h5 span {
@@ -681,7 +687,7 @@ a .iconify {
   }
 
   .seccionFormulario h3 {
-    font-size: 32px;
+    font-size: 2rem;
     margin: 15px;
   }
 
