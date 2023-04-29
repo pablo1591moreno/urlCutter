@@ -515,13 +515,12 @@ a .iconify {
 
   .fondo3 img {
     position: absolute;
-    top: 250%;
+    top: 245%;
     left: 0;
     width: 100%;
     height: 470px;
     z-index: -1;
   }
-
 
   .fondoImagen img {
     position: absolute;
@@ -686,7 +685,7 @@ a .iconify {
   /*-------------------- Form */
 
   .seccionFormulario {
-    top: 252%;
+    top: 247%;
   }
 
   .seccionFormulario h3 {
