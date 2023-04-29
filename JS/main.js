@@ -60,12 +60,23 @@ botonAcortado.addEventListener("click", () => {
 });
 
 
+
+
 function renderLinks(links) {
   // Selecciona el elemento HTML con id "seccionCortados" y borra su contenido
   seccionCortados.innerHTML = "";
+  
+  // Define el número máximo de enlaces que se deben renderizar
+  let maxLinks = 6;
+  
+  // Si estamos en la versión móvil, cambia el número máximo de enlaces renderizados a 4
+  if (window.matchMedia("(max-width: 415px)").matches) {
+    maxLinks = 4;
+  }
+  
   // Para cada objeto "element" en la lista "links", inserta HTML en el elemento "seccionCortados"
-  links.slice(0, 6).forEach((element, index) => {
-    if (index < 6) {
+  links.slice(0, maxLinks).forEach((element, index) => {
+    if (index < maxLinks) {
       seccionCortados.insertAdjacentHTML(
         'beforeend',
         `

@@ -500,7 +500,20 @@ a .iconify {
 
   .fondo2 img {
     position: absolute;
-    top: 420px;
+    top: 61%;
+    left: 0;
+    width: 100%;
+    height: 470px;
+    z-index: -1;
+  }
+
+  .fondo3 {
+    width: 100%;
+  }
+
+  .fondo3 img {
+    position: absolute;
+    top: 277%;
     left: 0;
     width: 100%;
     height: 470px;
@@ -523,7 +536,7 @@ a .iconify {
   }
 
   .descripcion {
-    width: 85%;
+    width: 90%;
     margin: auto;
   }
 
@@ -545,15 +558,19 @@ a .iconify {
   }
 
   .cortadorUrl {
-    width: 85%;
+    width: 90%;
     margin: 0;
   }
 
+  .cortadorUrl h3 {
+    font-size: 32px;
+  }
 
   /*-------------------- Cortados */
+
   .seccionCortados {
     height: auto;
-    width: 85%;
+    width: 90%;
     margin: 25px auto;
   }
 
@@ -565,7 +582,6 @@ a .iconify {
   }
 
   .links {
-    background: var(--grisClaro);
     border-radius: 14px;
     overflow: hidden;
     text-align: center;
@@ -597,12 +613,12 @@ a .iconify {
 
   .seccionPlanes {
     position: absolute;
-    top: 880px;
+    top: 130%;
   }
 
   .seccionPlanes h3 {
     margin-bottom: 24px;
-    font-size: 35px;
+    font-size: 32px;
   }
 
 
@@ -612,17 +628,19 @@ a .iconify {
     width: 100%;
     margin: 0;
   }
-  
+
   .plan {
     border-radius: 20px;
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
+    height: auto;
+    padding: 2% 0;
   }
 
   .plan h4 {
-    font-size: 45px;
+    font-size: 30px;
     text-align: center;
-    margin: 39px 0 45px 0;
+    margin: 20px 0 25px 0;
   }
 
   #planDosTitulo {
@@ -635,16 +653,16 @@ a .iconify {
 
   .plan p {
     padding: 0 5%;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 22px;
     text-align: justify;
   }
 
   .plan h5 {
     width: 150px;
     padding: 10px;
-    font-size: 35px;
-    margin: 30px 0px;
+    font-size: 25px;
+    margin: 5px 0px;
     line-height: 20px;
     text-align: center;
     border-radius: 0 15px 15px 0;
@@ -656,5 +674,32 @@ a .iconify {
     font-weight: 400;
   }
 
+  /*-------------------- Form */
+
+  .seccionFormulario {
+    top: 280%;
+  }
+
+  .seccionFormulario h3 {
+    font-size: 32px;
+    margin: 15px;
+  }
+
+  form input,
+  .consulta {
+    width: 85%;
+    margin-bottom: 10px;
+  }
+
+  /*-------------------- Footer */
+
+  footer {
+    top: 345%;
+    height: 50px;
+  }
+
+  a .iconify {
+    font-size: 30px;
+  }
 
 }
