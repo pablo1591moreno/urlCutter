@@ -472,7 +472,8 @@ a .iconify {
 
   .fondo1,
   .fondo2,
-  .fondo3 {
+  .fondo3,
+  .fondoImagen {
     display: block;
   }
 
