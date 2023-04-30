@@ -136,7 +136,7 @@ function renderLinks(links) {
 
 }
 
-// No es necesario utilizar JavaScript para este ejemplo, pero aquí te dejamos un código de ejemplo para agregar un evento al botón si lo necesitas
+
 const cutButton = document.querySelector('.botonAcortado');
 cutButton.addEventListener('click', () => {
   console.log('Botón "Cortar" pulsado');

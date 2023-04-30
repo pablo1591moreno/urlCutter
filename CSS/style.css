@@ -35,13 +35,26 @@ body {
   display: block;
 }
 
-.imageUrl{
+.imageUrl {
   position: absolute;
   width: 33%;
   top: 7%;
   right: 13%;
   z-index: +1;
+  animation-name: mover-imagen;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
+
+@keyframes mover-imagen {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 
 /*-------------------- Header */
 .seccionTituLogo {
@@ -54,7 +67,22 @@ body {
   padding-top: 2%;
   margin-left: 13%;
   align-items: center;
+  animation-name: mover-titulo-logo;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
+
+@keyframes mover-titulo-logo {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 .titulo,
 .logo {
@@ -81,7 +109,22 @@ body {
 .descripcion {
   width: 35%;
   margin-left: 13%;
+  animation-name: aparecer-descripcion;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;  
 }
+
+@keyframes aparecer-descripcion {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 .descripcion h2 {
   font-style: italic;
@@ -113,9 +156,22 @@ body {
   background-color: var(--azul);
 }
 
-
 .cortadorUrl {
   margin: 0px;
+  animation-name: aparece-cortador;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;  
+}
+
+@keyframes aparece-cortador {
+  0% {
+    transform: translateY(+100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .cortadorUrl h3 {
@@ -186,6 +242,18 @@ body {
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, 130px);
   gap: 45px;
+  animation-name: aparece-acortados;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out; 
+}
+
+@keyframes aparece-acortados {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .links {
@@ -298,6 +366,8 @@ button .text {
 
 /*-------------------- Planes */
 
+
+
 .seccionPlanes {
   height: 640px;
 }
@@ -314,17 +384,20 @@ button .text {
 }
 
 .planes {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
+  display: flex;
+  justify-content: center;
   gap: 30px;
   margin: 0 13%;
+  align-items: flex-end; /* Nueva propiedad */
 }
 
 .plan {
   background-color: var(--azul);
   border-radius: 20px;
   height: auto;
+  padding-bottom: 20px;
 }
+
 
 .plan h4 {
   font-size: 45px;
@@ -354,11 +427,10 @@ button .text {
   color: var(--azul);
   font-size: 35px;
   background-color: var(--grisClaro);
-  margin: 30px 0px;
+  margin: 0; 
   line-height: 20px;
   text-align: center;
   border-radius: 0 15px 15px 0;
-
 }
 
 .plan h5 span {
