@@ -23,15 +23,6 @@ body {
   margin: 0px;
 }
 
-.imagenFondo {
-  position: absolute;
-  width: 550px;
-  height: 521px;
-  right: 0px;
-  top: 7px;
-  z-index: -1;
-  overflow: hidden;
-}
 
 .fondoLineas img {
   position: fixed;
@@ -40,12 +31,20 @@ body {
   z-index: -2;
 }
 
-#wave{
+#wave {
   display: block;
 }
 
+.imageUrl{
+  position: absolute;
+  width: 33%;
+  top: 7%;
+  right: 13%;
+  z-index: +1;
+}
+
 /*-------------------- Header */
-.seccionTituLogo{
+.seccionTituLogo {
   background-color: var(--azul);
 }
 
@@ -110,7 +109,7 @@ body {
 }
 
 /*-------------------- CortadorUrl */
-.secccionCortadorUrl{
+.secccionCortadorUrl {
   background-color: var(--azul);
 }
 
@@ -123,7 +122,7 @@ body {
   text-align: center;
   font-size: 40px;
   font-weight: 400;
-  margin:0;
+  margin: 0;
 }
 
 .cortadorUrl h3 span {
@@ -324,7 +323,7 @@ button .text {
 .plan {
   background-color: var(--azul);
   border-radius: 20px;
-  height: 479px;
+  height: auto;
 }
 
 .plan h4 {
@@ -373,7 +372,6 @@ button .text {
   width: 100%;
   text-align: center;
   background-color: var(--azul);
-  padding: 2%;
 }
 
 .seccionFormulario h3 {
@@ -459,10 +457,18 @@ a .iconify {
 
 @media (max-width: 415px) {
 
-  #wave{
+  #wave {
     display: block;
   }
 
+  .primerSvg{
+    margin-bottom: 50px;
+  }
+
+  .imageUrl{
+    top: 40%;
+    right: 32%;
+  }
 
   /*-------------------- Header */
 
@@ -520,14 +526,15 @@ a .iconify {
     display: flex;
     justify-content: center;
   }
-  
+
   .cortados {
+    gap: 5px;
     margin: 0;
     width: 90%;
     display: grid;
+    padding: 2% 0 3%;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 130px);
-    gap: 5px;
   }
 
   .links {
@@ -618,7 +625,7 @@ a .iconify {
 
   /*-------------------- Form */
 
-  .seccionFormulario{
+  .seccionFormulario {
     padding: 0;
     margin: 0;
   }
