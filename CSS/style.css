@@ -455,14 +455,14 @@ a .iconify {
 
 /*------------------------------------------------------------------MOVIL---------------------------------------------------------*/
 
-@media (max-width: 415px) {
+@media (max-width: 425px) {
 
   #wave {
     display: block;
   }
 
   .primerSvg{
-    margin-bottom: 50px;
+    margin-bottom: 15%;
   }
 
   .imageUrl{
