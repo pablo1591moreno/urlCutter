@@ -23,35 +23,11 @@ body {
   margin: 0px;
 }
 
-#svg1 {
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-}
-
-#svg2 {
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  top: 429px;
-  z-index: -1;
-}
-
-#svg3 {
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  top: 1630px;
-  z-index: -1;
-}
-
 .imagenFondo {
   position: absolute;
   width: 550px;
   height: 521px;
-  left: 700px;
+  right: 0px;
   top: 7px;
   z-index: -1;
   overflow: hidden;
@@ -64,13 +40,21 @@ body {
   z-index: -2;
 }
 
+#wave{
+  display: block;
+}
 
 /*-------------------- Header */
+.seccionTituLogo{
+  background-color: var(--azul);
+}
+
 .tituLogo {
   display: flex;
   gap: 6px;
-  margin: 16px 80px 24px;
-  align-items: center
+  padding-top: 2%;
+  margin-left: 13%;
+  align-items: center;
 }
 
 .titulo,
@@ -89,12 +73,14 @@ body {
 
 /*-------------------- Descripcion */
 .seccionDescripcion {
+  background-color: var(--azul);
+  height: auto;
   width: 100%;
-  height: 336px;
+  padding-bottom: 2%;
 }
 
 .descripcion {
-  width: 441px;
+  width: 35%;
   margin-left: 13%;
 }
 
@@ -124,17 +110,20 @@ body {
 }
 
 /*-------------------- CortadorUrl */
+.secccionCortadorUrl{
+  background-color: var(--azul);
+}
+
 
 .cortadorUrl {
-  margin-top: 35px;
-  margin-bottom: 15px;
+  margin: 0px;
 }
 
 .cortadorUrl h3 {
   text-align: center;
   font-size: 40px;
   font-weight: 400;
-  margin-bottom: 11px;
+  margin:0;
 }
 
 .cortadorUrl h3 span {
@@ -184,13 +173,16 @@ body {
   display: inline-block;
 }
 
+
 /*-------------------- Cortados */
 .seccionCortados {
   height: 391px;
-  margin: 30px 13% 0;
+  background-color: var(--azul);
 }
 
 .cortados {
+  margin: 0px 13%;
+  padding-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, 130px);
@@ -308,8 +300,6 @@ button .text {
 /*-------------------- Planes */
 
 .seccionPlanes {
-  position: absolute;
-  top: 930px;
   height: 640px;
 }
 
@@ -327,7 +317,7 @@ button .text {
 .planes {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 40px;
+  gap: 30px;
   margin: 0 13%;
 }
 
@@ -380,15 +370,16 @@ button .text {
 /*-------------------- Form */
 
 .seccionFormulario {
-  position: absolute;
   width: 100%;
-  top: 1680px;
   text-align: center;
+  background-color: var(--azul);
+  padding: 2%;
 }
 
 .seccionFormulario h3 {
   font-size: 36px;
   color: var(--verde);
+  margin-top: 0;
 }
 
 .seccionFormulario h3 span {
@@ -439,9 +430,7 @@ input::placeholder,
 
 /*-------------------- footer */
 footer {
-  position: absolute;
   width: 100%;
-  top: 2200px;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -470,67 +459,10 @@ a .iconify {
 
 @media (max-width: 415px) {
 
-  .fondo1,
-  .fondo2,
-  .fondo3,
-  .fondoImagen {
+  #wave{
     display: block;
   }
 
-  #svg1,
-  #svg2,
-  #svg3,
-  .imagenFondo {
-    display: none;
-  }
-
-  .fondo1 {
-    width: 100%;
-  }
-
-  .fondo1 img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-  }
-
-  .fondo2 {
-    width: 100%;
-  }
-
-  .fondo2 img {
-    position: absolute;
-    top: 61%;
-    left: 0;
-    width: 100%;
-    height: 470px;
-    z-index: -1;
-  }
-
-  .fondo3 {
-    width: 100%;
-  }
-
-  .fondo3 img {
-    position: absolute;
-    top: 258%;
-    left: 0;
-    width: 100%;
-    height: 470px;
-    z-index: -1;
-  }
-
-  .fondoImagen img {
-    position: absolute;
-    top: 16%;
-    left: 0;
-    width: 100%;
-    height: 470px;
-    z-index: -2;
-  }
 
   /*-------------------- Header */
 
@@ -585,7 +517,7 @@ a .iconify {
   .seccionCortados {
     height: auto;
     width: 90%;
-    margin: 25px auto;
+    margin: 25px 13%;
   }
 
   .cortados {
@@ -636,7 +568,6 @@ a .iconify {
     font-size: 2em;
   }
 
-
   .planes {
     display: flex;
     flex-direction: column;
@@ -686,7 +617,6 @@ a .iconify {
   /*-------------------- Form */
 
   .seccionFormulario {
-    top: 260%;
   }
 
   .seccionFormulario h3 {
@@ -703,7 +633,6 @@ a .iconify {
   /*-------------------- Footer */
 
   footer {
-    top: 345%;
     height: 50px;
   }
 
