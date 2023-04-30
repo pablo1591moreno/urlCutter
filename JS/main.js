@@ -70,7 +70,7 @@ function renderLinks(links) {
   let maxLinks = 6;
   
   // Si estamos en la versión móvil, cambia el número máximo de enlaces renderizados a 4
-  if (window.matchMedia("(max-width: 415px)").matches) {
+  if (window.matchMedia("(max-width: 425px)").matches) {
     maxLinks = 4;
   }
   

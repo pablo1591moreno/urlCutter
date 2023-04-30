@@ -243,7 +243,7 @@ body {
   grid-template-rows: repeat(2, 130px);
   gap: 45px;
   animation-name: aparece-acortados;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out; 
 }
 
@@ -365,8 +365,6 @@ button .text {
 }
 
 /*-------------------- Planes */
-
-
 
 .seccionPlanes {
   height: 640px;
@@ -542,6 +540,16 @@ a .iconify {
     right: 32%;
   }
 
+  @keyframes mover-imagen {
+    0% {
+      transform: translateX(-150%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+
   /*-------------------- Header */
 
   .tituLogo {
@@ -591,12 +599,34 @@ a .iconify {
     font-size: 2em;
   }
 
+  @keyframes aparece-cortador {
+    0% {
+      transform: translateX(+100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
   /*-------------------- Cortados */
 
   .seccionCortados {
     height: auto;
     display: flex;
     justify-content: center;
+  }
+
+  @keyframes aparece-acortados {
+    0% {
+      transform: translateY(+100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .cortados {
